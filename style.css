@@ -1,0 +1,283 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    perspective: 600px;
+    overflow: hidden;
+    background-image: radial-gradient(circle, #123, #000 30em);
+  }
+  body *:not(:empty) {
+    transform-style: preserve-3d;
+  }
+  .scene {
+    position: relative;
+  }
+  .ball {
+    position: absolute;
+    inset: -8em;
+    background-image: radial-gradient(circle at top, #fff, #000);
+    border-radius: 50%;
+    box-shadow: 0 0 2em #000a;
+  }
+  .ring {
+    position: absolute;
+  }
+  .ring i {
+    position: absolute;
+    border: 1px solid hsl(var(--hue), 100%, 75%);
+    box-shadow: 0 0 1em hsl(var(--hue), 100%, 75%) inset, 0 0 1em hsl(var(--hue), 100%, 75%);
+    border-radius: 50%;
+    animation: iMove 24s var(--delay) infinite both linear, iScale 24s var(--delay) infinite both cubic-bezier(0.3642, 0, 0.6358, 1);
+  }
+  .ring i:nth-child(1) {
+    --delay: 0s;
+    --hue: 0;
+    --rx: 189deg;
+    --ry: 101deg;
+    --rz: 225deg;
+  }
+  .ring i:nth-child(2) {
+    --delay: -0.75s;
+    --hue: 98;
+    --rx: 142deg;
+    --ry: 176deg;
+    --rz: 14deg;
+  }
+  .ring i:nth-child(3) {
+    --delay: -1.5s;
+    --hue: 196;
+    --rx: 252deg;
+    --ry: 103deg;
+    --rz: 67deg;
+  }
+  .ring i:nth-child(4) {
+    --delay: -2.25s;
+    --hue: 294;
+    --rx: 168deg;
+    --ry: 35deg;
+    --rz: 31deg;
+  }
+  .ring i:nth-child(5) {
+    --delay: -3s;
+    --hue: 392;
+    --rx: 95deg;
+    --ry: 103deg;
+    --rz: 271deg;
+  }
+  .ring i:nth-child(6) {
+    --delay: -3.75s;
+    --hue: 490;
+    --rx: 97deg;
+    --ry: 27deg;
+    --rz: 258deg;
+  }
+  .ring i:nth-child(7) {
+    --delay: -4.5s;
+    --hue: 588;
+    --rx: 176deg;
+    --ry: 233deg;
+    --rz: 308deg;
+  }
+  .ring i:nth-child(8) {
+    --delay: -5.25s;
+    --hue: 686;
+    --rx: 186deg;
+    --ry: 277deg;
+    --rz: 263deg;
+  }
+  .ring i:nth-child(9) {
+    --delay: -6s;
+    --hue: 784;
+    --rx: 259deg;
+    --ry: 311deg;
+    --rz: 95deg;
+  }
+  .ring i:nth-child(10) {
+    --delay: -6.75s;
+    --hue: 882;
+    --rx: 122deg;
+    --ry: 15deg;
+    --rz: 84deg;
+  }
+  .ring i:nth-child(11) {
+    --delay: -7.5s;
+    --hue: 980;
+    --rx: 323deg;
+    --ry: 203deg;
+    --rz: 93deg;
+  }
+  .ring i:nth-child(12) {
+    --delay: -8.25s;
+    --hue: 1078;
+    --rx: 95deg;
+    --ry: 161deg;
+    --rz: 90deg;
+  }
+  .ring i:nth-child(13) {
+    --delay: -9s;
+    --hue: 1176;
+    --rx: 65deg;
+    --ry: 350deg;
+    --rz: 16deg;
+  }
+  .ring i:nth-child(14) {
+    --delay: -9.75s;
+    --hue: 1274;
+    --rx: 30deg;
+    --ry: 83deg;
+    --rz: 99deg;
+  }
+  .ring i:nth-child(15) {
+    --delay: -10.5s;
+    --hue: 1372;
+    --rx: 187deg;
+    --ry: 230deg;
+    --rz: 47deg;
+  }
+  .ring i:nth-child(16) {
+    --delay: -11.25s;
+    --hue: 1470;
+    --rx: 341deg;
+    --ry: 258deg;
+    --rz: 19deg;
+  }
+  .ring i:nth-child(17) {
+    --delay: -12s;
+    --hue: 1568;
+    --rx: 1deg;
+    --ry: 84deg;
+    --rz: 191deg;
+  }
+  .ring i:nth-child(18) {
+    --delay: -12.75s;
+    --hue: 1666;
+    --rx: 284deg;
+    --ry: 273deg;
+    --rz: 4deg;
+  }
+  .ring i:nth-child(19) {
+    --delay: -13.5s;
+    --hue: 1764;
+    --rx: 344deg;
+    --ry: 32deg;
+    --rz: 113deg;
+  }
+  .ring i:nth-child(20) {
+    --delay: -14.25s;
+    --hue: 1862;
+    --rx: 26deg;
+    --ry: 122deg;
+    --rz: 341deg;
+  }
+  .ring i:nth-child(21) {
+    --delay: -15s;
+    --hue: 1960;
+    --rx: 61deg;
+    --ry: 28deg;
+    --rz: 83deg;
+  }
+  .ring i:nth-child(22) {
+    --delay: -15.75s;
+    --hue: 2058;
+    --rx: 54deg;
+    --ry: 186deg;
+    --rz: 208deg;
+  }
+  .ring i:nth-child(23) {
+    --delay: -16.5s;
+    --hue: 2156;
+    --rx: 172deg;
+    --ry: 165deg;
+    --rz: 156deg;
+  }
+  .ring i:nth-child(24) {
+    --delay: -17.25s;
+    --hue: 2254;
+    --rx: 260deg;
+    --ry: 340deg;
+    --rz: 326deg;
+  }
+  .ring i:nth-child(25) {
+    --delay: -18s;
+    --hue: 2352;
+    --rx: 298deg;
+    --ry: 284deg;
+    --rz: 354deg;
+  }
+  .ring i:nth-child(26) {
+    --delay: -18.75s;
+    --hue: 2450;
+    --rx: 87deg;
+    --ry: 83deg;
+    --rz: 123deg;
+  }
+  .ring i:nth-child(27) {
+    --delay: -19.5s;
+    --hue: 2548;
+    --rx: 249deg;
+    --ry: 180deg;
+    --rz: 275deg;
+  }
+  .ring i:nth-child(28) {
+    --delay: -20.25s;
+    --hue: 2646;
+    --rx: 330deg;
+    --ry: 315deg;
+    --rz: 350deg;
+  }
+  .ring i:nth-child(29) {
+    --delay: -21s;
+    --hue: 2744;
+    --rx: 296deg;
+    --ry: 158deg;
+    --rz: 315deg;
+  }
+  .ring i:nth-child(30) {
+    --delay: -21.75s;
+    --hue: 2842;
+    --rx: 281deg;
+    --ry: 25deg;
+    --rz: 191deg;
+  }
+  .ring i:nth-child(31) {
+    --delay: -22.5s;
+    --hue: 2940;
+    --rx: 271deg;
+    --ry: 56deg;
+    --rz: 353deg;
+  }
+  .ring i:nth-child(32) {
+    --delay: -23.25s;
+    --hue: 3038;
+    --rx: 252deg;
+    --ry: 218deg;
+    --rz: 68deg;
+  }
+  @keyframes iMove {
+    0% {
+      transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(50em);
+    }
+    100% {
+      transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(-50em);
+    }
+  }
+  @keyframes iScale {
+    0%, 100% {
+      inset: -1em;
+      opacity: 0;
+    }
+    35%, 65% {
+      inset: -1em;
+      opacity: 1;
+    }
+    50% {
+      inset: -10em;
+      opacity: 1;
+    }
+  }
+  
